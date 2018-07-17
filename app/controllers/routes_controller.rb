@@ -1,7 +1,11 @@
 class RoutesController < ApplicationController
 
   def index
-    @routes = Route.all
+    if params[:user_id]
+      @routes = current_user.routes
+    else
+      @routes = Route.all
+    end
   end
 
   def new
