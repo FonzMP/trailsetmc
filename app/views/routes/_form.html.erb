@@ -1,5 +1,12 @@
 <%= form_for @route do |f| %>
-  <%= f.label :name %>
+  <%= f.label "Name:" %>
+  <br>
   <%= f.text_field :name %>
+  <br>
+  <%= f.label "Length:" %>
+  <br>
+  <%= f.number_field :length, min: 0, max: 50 %>
+  <br>
+  <br>
   <%= f.submit %>
 <% end %>
