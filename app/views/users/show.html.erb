@@ -1,1 +1,14 @@
-<h1>Welcome <%= @user.first_name %></h1>
+<h1>Welcome 
+<% if !@user.first_name.blank? %>
+  <%= @user.first_name %>
+<% else %>
+  <%= @user.username %>
+<% end %></h1>
+
+<br>
+
+<% if !current_user %>
+  <%= link_to "Log In", login_path %>
+<% else %>
+  <%= link_to "Log Out", logout_path, method: :delete %>
+<% end %>
