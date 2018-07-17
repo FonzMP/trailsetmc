@@ -1,5 +1,10 @@
 <% if !@user.errors.empty? %>
   <h3>Sorry, we experienced the following errors!</h3>
+  <% @user.errors.full_messages.each do |msg| %>
+    <%= msg %>
+    <br>
+    <br>
+  <% end %>
 <% end %>
 
 <%= render 'form' %>
