@@ -5,8 +5,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by(username: params[:username])
-    binding.pry
+    @user = User.where('username LIKE ?', "%#{params[:username]}%").first
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       
