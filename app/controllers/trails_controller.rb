@@ -1,5 +1,9 @@
 class TrailsController < ApplicationController
 
+  def welcome
+    
+  end
+
   def index
     if params[:user_id]
       @trails = current_user.trails
