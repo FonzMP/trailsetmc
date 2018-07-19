@@ -14,14 +14,14 @@ ActiveRecord::Schema.define(version: 2018_07_17_150930) do
 
   create_table "rides", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "route_id"
+    t.integer "trail_id"
     t.string "name"
     t.integer "length"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "routes", force: :cascade do |t|
+  create_table "trails", force: :cascade do |t|
     t.string "name"
     t.integer "length"
     t.datetime "created_at", null: false

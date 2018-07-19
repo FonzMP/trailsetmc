@@ -1,6 +1,6 @@
-class CreateRoutes < ActiveRecord::Migration[5.2]
+class CreateTrails < ActiveRecord::Migration[5.2]
   def change
-    create_table :routes do |t|
+    create_table :trails do |t|
       t.string :name
       t.integer :length
       

@@ -32,14 +32,14 @@ class UsersController < ApplicationController
     if @user
       redirect_to user_path(@user)
     else
-      redirect_to routes_path
+      redirect_to trails_path
     end
   end
 
   def destroy
     @user = User.find(params[:id]).destroy
 
-    redirect_to routes_path
+    redirect_to trails_path
   end
 
   private

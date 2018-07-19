@@ -6,5 +6,5 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 8 }, on: :create
 
   has_many :rides
-  has_many :routes, through: :rides
+  has_many :trails, through: :rides
 end

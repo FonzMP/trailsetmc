@@ -1,4 +1,4 @@
 class Ride < ApplicationRecord
   belongs_to :user
-  belongs_to :route
+  belongs_to :trail
 end
