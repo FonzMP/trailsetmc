@@ -1,7 +1,7 @@
 <% @trails.each do |trail| %>
-  <%= trail.name %>
+  <strong>Name: </strong><%= trail.name %>
   <br>
-  <%= trail.length %>
+  <strong>Length: </strong><%= trail.length %> miles
   <br>
   <%= link_to "View #{trail.name}", trail_path(trail) %>
   <br>
