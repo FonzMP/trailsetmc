@@ -1,6 +1,8 @@
 <h1>Welcome to TrailSetMC</h1>
 
-<% if !@current_user %>
+<% if !session[:user_id] %>
   <h4>New Users - <%= link_to "Sign Up!", new_user_path %>
   <h4>Exisiting Users - <%= link_to "Log In", login_path %>
 <% end %>
+
+<p>TrailSetMC motorcycle app is an app designed to provide ease of mind for the solo, and/or safe rider out there. Our focus is to provide an application that assists in keeping our users safe while adventuring in the great outdoors.</p>
