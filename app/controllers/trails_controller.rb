@@ -23,9 +23,10 @@ class TrailsController < ApplicationController
   def create
     @trail = Trail.create(trail_params)
     if @trail.save
-      current_user.trails << @trail
-      current_user.save
-
+      if current_user
+        current_user.trails << @trail
+        current_user.save
+      end
       redirect_to trail_path(@trail)
     else
       redirect_to new_trail_path

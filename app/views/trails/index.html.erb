@@ -3,7 +3,12 @@
   <br>
   <strong>Length: </strong><%= trail.length %> miles
   <br>
-  <strong>Created by: </strong><%= link_to trail.users.first.username, user_path(trail.users.first) if trail.users.first.username %>
+  <strong>Created by: </strong>
+  <% if trail.users.blank? %>
+    Anonymous
+  <% else %>
+    <%= link_to trail.users.first.username, user_path(trail.users.first) %>
+  <% end %>
   <br>
   <%= link_to "View #{trail.name}", trail_path(trail) %>
   <br>
