@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+User.destroy_all
+Trail.destroy_all
+
+User.create(username: "FonzMP", first_name: "Alex", last_name: "Wilson", email: "fonzmp@gmail.com", password: "password", birthdate: "1986-03-05")
+
+Trail.create(name: "22 Day Trail", length: 36.2)
