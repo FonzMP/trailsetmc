@@ -1,0 +1,12 @@
+<h1>Users</h1>
+
+<% @users.each do |user| %>
+  <%= user.first_name %>
+  <br>
+  <%= user.last_name %>
+  <br>
+  <%= user.birthdate %>
+  <br>
+  <%= link_to user.username, user_path(user) %>
+  <br>
+<% end %>
