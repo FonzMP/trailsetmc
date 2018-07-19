@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :users do
     resources :trails
   end
+
+  resources :rides
   
   resources :trails
   root to: "trails#welcome"
