@@ -8,4 +8,6 @@
 <br>
 <br>
 
-<%= link_to "View Your Trails", user_trails_path(@user) %>
+<% if current_user %>
+  <%= link_to "View Your Trails", user_trails_path(current_user) %>
+<% end %>
