@@ -6,7 +6,7 @@ class TrailsController < ApplicationController
 
   def index
     if params[:user_id]
-      @trails = current_user.trails
+      @trails = User.find(params[:user_id]).trails
     else
       @trails = Trail.all
     end
@@ -23,9 +23,9 @@ class TrailsController < ApplicationController
   def create
     @trail = Trail.create(trail_params)
     if @trail.save
-      if current_user
-        current_user.trails << @trail
-        current_user.save
+      if @current_user
+        @current_user.trails << @trail
+        @current_user.save
       end
       redirect_to trail_path(@trail)
     else
